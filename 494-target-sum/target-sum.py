@@ -21,7 +21,9 @@ class Solution:
         if (total+target)%2!=0:
             return 0
         subset_target = (total + target) // 2
+
         dp=[[-1]*(subset_target+1) for _ in range(n+1)]
+
         return self.solve(nums,subset_target,n,dp)
 
         
